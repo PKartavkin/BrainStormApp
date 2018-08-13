@@ -26,7 +26,7 @@ class AddIdeaViewController: UIViewController {
             categoryButton.titleLabel?.text = selectedCategory.title
         }
     }
-
+    
     @IBOutlet weak var timeToMarketCosmosView: CosmosView!
     @IBOutlet weak var requiredMoneyCosmosView: CosmosView!
     @IBOutlet weak var profitCosmosView: CosmosView!
@@ -54,13 +54,13 @@ class AddIdeaViewController: UIViewController {
     }
     
     private func calculateScore(timeToMarket: Int, requiredMoney: Int, expectableProfit: Int, difficulty: Int) -> Double {
-        let timeToMarketNormalizedScore = Double(2 / timeToMarket)
-        let requiredMoneyNormalizedScore = Double(3 / requiredMoney)
-        let expectableProfitNormalizedScore = Double(expectableProfit / 5)
-        let difficultyNormalizedScore = Double(3 / difficulty)
+        let timeToMarketNormalizedScore = 2.0 / Double(timeToMarket)
+        let requiredMoneyNormalizedScore = 3.0 / Double(requiredMoney)
+        let expectableProfitNormalizedScore = Double(expectableProfit) / 5.0
+        let difficultyNormalizedScore = 3.0 / Double(difficulty)
         let score = timeToMarketNormalizedScore + requiredMoneyNormalizedScore + expectableProfitNormalizedScore + difficultyNormalizedScore
-        
-        return score
+        let scoreRounded = round(score / 0.1) * 0.1
+        return scoreRounded
     }
     
     // MARK: - IBAction
@@ -77,28 +77,28 @@ class AddIdeaViewController: UIViewController {
     @IBAction func timeToMarket(_ sender: UIButton) {
         showStandartPicker(fieldName: "Time To Market",
                            fieldButton: sender) { [weak self] (count) in
-            self?.timeToMarketCosmosView.rating = Double(count)
+                            self?.timeToMarketCosmosView.rating = Double(count)
         }
     }
     
     @IBAction func requiredMoney(_ sender: UIButton) {
         showStandartPicker(fieldName: "Required Money",
                            fieldButton: sender) { [weak self] (count) in
-            self?.requiredMoneyCosmosView.rating = Double(count)
+                            self?.requiredMoneyCosmosView.rating = Double(count)
         }
     }
     
     @IBAction func expectableProfit(_ sender: UIButton) {
         showStandartPicker(fieldName: "Expectable Profit",
                            fieldButton: sender) { [weak self] (count) in
-            self?.profitCosmosView.rating = Double(count)
+                            self?.profitCosmosView.rating = Double(count)
         }
     }
     
     @IBAction func difficulty(_ sender: UIButton) {
         showStandartPicker(fieldName: "Difficulty",
                            fieldButton: sender) { [weak self] (count) in
-            self?.difficultyCosmosView.rating = Double(count)
+                            self?.difficultyCosmosView.rating = Double(count)
         }
     }
     
