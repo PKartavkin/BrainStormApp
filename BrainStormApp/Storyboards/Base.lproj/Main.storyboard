@@ -33,7 +33,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_category_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Tyn-gk-waT">
-                                            <rect key="frame" x="20" y="35" width="20" height="20"/>
+                                            <rect key="frame" x="20" y="30" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="Wub-YA-b17"/>
                                                 <constraint firstAttribute="height" constant="20" id="eOJ-n2-4qM"/>
@@ -46,7 +46,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score_icon" translatesAutoresizingMaskIntoConstraints="NO" id="WBH-wJ-k17">
-                                            <rect key="frame" x="331" y="26" width="24" height="38"/>
+                                            <rect key="frame" x="331" y="21" width="24" height="38"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="38" id="gC8-CX-mxz"/>
                                                 <constraint firstAttribute="width" constant="24" id="tGr-Nv-I5p"/>
@@ -68,7 +68,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e40-T4-iul">
-                                            <rect key="frame" x="317" y="40" width="20" height="11"/>
+                                            <rect key="frame" x="317" y="35" width="20" height="11"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="Tc1-dU-efR"/>
                                                 <constraint firstAttribute="height" constant="11" id="evp-57-tKp"/>
@@ -173,7 +173,7 @@
                                                 <fragment content="Category">
                                                     <attributes>
                                                         <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" size="14" name="SFProDisplay-Medium"/>
+                                                        <font key="NSFont" metaFont="system" size="14"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -541,7 +541,7 @@
                         <viewLayoutGuide key="safeArea" id="ehq-s6-YrV"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add new idea" id="uVU-Cy-0xO">
-                        <barButtonItem key="rightBarButtonItem" image="done_icon" id="vGS-mF-VF9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="vGS-mF-VF9">
                             <connections>
                                 <action selector="done:" destination="NyK-wy-Jm1" id="dWT-3U-dBT"/>
                             </connections>
@@ -638,7 +638,7 @@
                         <viewLayoutGuide key="safeArea" id="Faf-31-oo0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add category" id="Cfo-NO-54u">
-                        <barButtonItem key="rightBarButtonItem" image="done_icon" id="5Kn-3v-E0Y">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5Kn-3v-E0Y">
                             <connections>
                                 <action selector="save:" destination="sb6-3h-LHL" id="rNM-Mn-QuQ"/>
                             </connections>
@@ -710,7 +710,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Manage categories" id="9ok-xg-3Bh">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="AvP-v2-wYI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AvP-v2-wYI">
                             <connections>
                                 <action selector="addCategory:" destination="6BU-ph-8iQ" id="p1B-8f-dLb"/>
                             </connections>
@@ -753,7 +753,6 @@
     <resources>
         <image name="arrow_icon" width="13" height="8"/>
         <image name="difficulty_icon" width="36" height="36"/>
-        <image name="done_icon" width="16" height="12"/>
         <image name="empty_circle_icon" width="10" height="10"/>
         <image name="expected_profit_icon" width="36" height="31"/>
         <image name="filled_circle_icon" width="10" height="10"/>
@@ -764,6 +763,6 @@
         <image name="white_category_icon" width="8" height="8"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="j6K-q2-1Zm"/>
+        <segue reference="RGI-pv-eAq"/>
     </inferredMetricsTieBreakers>
 </document>
