@@ -24,7 +24,9 @@ class IdeasTableViewController: UITableViewController {
     // MARK: - Private
     
     private func loadData() {
-        ideas = CoreStore.monitorList(From<Idea>(), OrderBy<Idea>(.ascending("title")))
+        ideas = CoreStore.monitorList(From<Idea>(), OrderBy<Idea>(
+            .descending("score"),
+            .ascending("title")))
         ideas.addObserver(self)
     }
     
