@@ -13,6 +13,10 @@ class Idea: NSManagedObject {
     
     @NSManaged var title: String
     @NSManaged var desc: String
+    @NSManaged var timeToMarket: Int16
+    @NSManaged var requiredMoney: Int16
+    @NSManaged var expectedProfit: Int16
+    @NSManaged var difficulty: Int16
     @NSManaged var score: Double
     @NSManaged var category: Category?
 }

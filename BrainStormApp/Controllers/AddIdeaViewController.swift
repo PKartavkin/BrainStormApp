@@ -126,7 +126,14 @@ class AddIdeaViewController: UIViewController {
                                     expectableProfit: Int(profitCosmosView.rating),
                                     difficulty: Int(difficultyCosmosView.rating))
         
-        DatabaseManager.addIdea(name: title, description: description, rating: rating, category: selectedCategory)
+        DatabaseManager.addIdea(name: title,
+                                description: description,
+                                timeToMarket: Int16(timeToMarketCosmosView.rating),
+                                requiredMoney: Int16(requiredMoneyCosmosView.rating),
+                                expectedProfit: Int16(profitCosmosView.rating),
+                                difficulty: Int16(difficultyCosmosView.rating),
+                                rating: rating,
+                                category: selectedCategory)
         
         navigationController?.popViewController(animated: true)
     }

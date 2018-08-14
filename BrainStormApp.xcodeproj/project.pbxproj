@@ -56,6 +56,8 @@
 		B2FA9D382104024200DFF1C5 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		B2FA9D3D210408AE00DFF1C5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C2A3D9815BFCF9342A97A141 /* Pods-BrainStormApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStormApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrainStormApp/Pods-BrainStormApp.debug.xcconfig"; sourceTree = "<group>"; };
+        E987EFAD2122275600AA89E2 /* BrainStormMarksFields.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrainStormMarksFields.xcdatamodel; sourceTree = "<group>"; };
+		E987EFAE21222A8900AA89E2 /* BrainStormUpdated.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrainStormUpdated.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -567,9 +569,11 @@
 		B21190BA211114D600F3CD9C /* BrainStormApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				E987EFAE21222A8900AA89E2 /* BrainStormUpdated.xcdatamodel */,
+				E987EFAD2122275600AA89E2 /* BrainStormMarksFields.xcdatamodel */,
 				B21190BB211114D600F3CD9C /* BrainStorm.xcdatamodel */,
 			);
-			currentVersion = B21190BB211114D600F3CD9C /* BrainStorm.xcdatamodel */;
+			currentVersion = E987EFAE21222A8900AA89E2 /* BrainStormUpdated.xcdatamodel */;
 			path = BrainStormApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -54,12 +54,23 @@ class DatabaseManager {
         return CoreStore.fetchAll(From<Category>())!
     }
     
-    static func addIdea(name: String, description: String, rating: Double, category: Category?) -> Void {
+    static func addIdea(name: String,
+                        description: String,
+                        timeToMarket: Int16,
+                        requiredMoney: Int16,
+                        expectedProfit: Int16,
+                        difficulty: Int16,
+                        rating: Double,
+                        category: Category?) -> Void {
         CoreStore.perform(
             asynchronous: { (transaction) -> Void in
                 let idea = transaction.create(Into<Idea>())
                 idea.title = name
                 idea.desc = description
+                idea.timeToMarket = timeToMarket
+                idea.requiredMoney = requiredMoney
+                idea.expectedProfit = expectedProfit
+                idea.difficulty = difficulty
                 idea.score = rating
                 
                 guard let category = category else {

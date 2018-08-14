@@ -364,7 +364,6 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "expected_profit_icon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'expected_profit_icon' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "red_category_icon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'red_category_icon' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "time_to_market_icon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'time_to_market_icon' is used in storyboard 'Main', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "done_icon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'done_icon' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "arrow_icon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'arrow_icon' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "required_money_icon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'required_money_icon' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "empty_circle_icon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'empty_circle_icon' is used in storyboard 'Main', but couldn't be loaded.") }
