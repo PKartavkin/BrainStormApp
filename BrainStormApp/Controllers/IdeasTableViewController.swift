@@ -33,19 +33,8 @@ class IdeasTableViewController: UITableViewController {
     func exportIdeasToClipboard() {
         var ideasTxt = ""
         for idea in ideas.objectsInAllSections() {
-            ideasTxt.append("Title: \(idea.title) \n")
-            if let categoryUnwrapped = idea.category {
-                ideasTxt.append("Category: \(categoryUnwrapped.title) \n")
-            } else {
-                ideasTxt.append("Category: none \n")
-            }
-            ideasTxt.append("Description: \(idea.desc) \n")
-            ideasTxt.append("Time to market: \(idea.timeToMarket) \n")
-            ideasTxt.append("Required money: \(idea.requiredMoney) \n")
-            ideasTxt.append("Expected profit: \(idea.expectedProfit) \n")
-            ideasTxt.append("Difficulty: \(idea.difficulty) \n")
-            ideasTxt.append("Score: \(idea.score) \n")
-            ideasTxt.append("********************** \n")
+            ideasTxt += idea.getIdeaAsString()
+            ideasTxt += "********************** \n"
         }
         let clipboard = UIPasteboard.general
         clipboard.string = ideasTxt
