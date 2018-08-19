@@ -232,19 +232,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS3-Og-zuh">
-                                                <rect key="frame" x="315" y="7" width="40" height="36"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="rBW-BG-sHZ"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="0">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="timeToMarket:" destination="NyK-wy-Jm1" eventType="touchUpInside" id="9B1-1J-sEX"/>
-                                                </connections>
-                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJQ-EF-6py" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="100" y="25" width="215" height="24"/>
                                                 <userDefinedRuntimeAttributes>
@@ -271,6 +258,13 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqi-Jj-Agh">
+                                                <rect key="frame" x="353" y="13" width="13" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -278,12 +272,8 @@
                                             <constraint firstAttribute="bottom" secondItem="wJQ-EF-6py" secondAttribute="bottom" constant="26" id="EFm-3M-Sda"/>
                                             <constraint firstItem="wJQ-EF-6py" firstAttribute="top" secondItem="6gD-Vv-26I" secondAttribute="bottom" constant="5" id="EQN-7r-MvZ"/>
                                             <constraint firstItem="6gD-Vv-26I" firstAttribute="leading" secondItem="4en-On-vMq" secondAttribute="trailing" constant="20" id="HEc-Kw-1nd"/>
-                                            <constraint firstAttribute="trailing" secondItem="LS3-Og-zuh" secondAttribute="trailing" constant="20" id="Qc3-7K-NfR"/>
-                                            <constraint firstItem="LS3-Og-zuh" firstAttribute="leading" secondItem="6gD-Vv-26I" secondAttribute="trailing" id="QkW-BW-gDi"/>
-                                            <constraint firstItem="LS3-Og-zuh" firstAttribute="leading" secondItem="wJQ-EF-6py" secondAttribute="trailing" id="UY0-bM-Y5Z"/>
                                             <constraint firstItem="6gD-Vv-26I" firstAttribute="top" secondItem="4en-On-vMq" secondAttribute="top" id="fB3-gA-UVH"/>
                                             <constraint firstItem="4en-On-vMq" firstAttribute="top" secondItem="GFg-Dy-tdi" secondAttribute="top" id="mIc-UL-4kG"/>
-                                            <constraint firstItem="LS3-Og-zuh" firstAttribute="centerY" secondItem="4en-On-vMq" secondAttribute="centerY" id="wCv-gr-Enx"/>
                                             <constraint firstItem="4en-On-vMq" firstAttribute="leading" secondItem="GFg-Dy-tdi" secondAttribute="leading" constant="30" id="xj0-np-pzd"/>
                                         </constraints>
                                     </view>
@@ -303,19 +293,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5e-yv-t7m">
-                                                <rect key="frame" x="315" y="7" width="40" height="36"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="zAh-ly-Tfq"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="0">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="requiredMoney:" destination="NyK-wy-Jm1" eventType="touchUpInside" id="KJL-ui-kLN"/>
-                                                </connections>
-                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-Vl-mDe" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="100" y="25" width="215" height="24"/>
                                                 <userDefinedRuntimeAttributes>
@@ -342,20 +319,23 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmM-qv-3V7">
+                                                <rect key="frame" x="342" y="27" width="13" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="55U-Dn-1mN" firstAttribute="top" secondItem="HSY-cP-Z9Y" secondAttribute="top" id="Kuu-po-APo"/>
-                                            <constraint firstItem="d5e-yv-t7m" firstAttribute="leading" secondItem="yLD-0G-lwd" secondAttribute="trailing" id="VWy-co-Ph5"/>
-                                            <constraint firstItem="d5e-yv-t7m" firstAttribute="leading" secondItem="gpd-Vl-mDe" secondAttribute="trailing" id="aX2-cK-meo"/>
                                             <constraint firstItem="gpd-Vl-mDe" firstAttribute="top" secondItem="yLD-0G-lwd" secondAttribute="bottom" constant="5" id="cim-28-pfp"/>
                                             <constraint firstItem="gpd-Vl-mDe" firstAttribute="leading" secondItem="yLD-0G-lwd" secondAttribute="leading" id="eRu-7W-S72"/>
                                             <constraint firstItem="yLD-0G-lwd" firstAttribute="leading" secondItem="55U-Dn-1mN" secondAttribute="trailing" constant="20" id="gSA-PV-cDq"/>
                                             <constraint firstItem="55U-Dn-1mN" firstAttribute="leading" secondItem="HSY-cP-Z9Y" secondAttribute="leading" constant="30" id="gUE-vq-gYO"/>
                                             <constraint firstItem="yLD-0G-lwd" firstAttribute="top" secondItem="55U-Dn-1mN" secondAttribute="top" id="lmn-9x-A4n"/>
                                             <constraint firstAttribute="bottom" secondItem="gpd-Vl-mDe" secondAttribute="bottom" constant="26" id="mGX-ix-OeI"/>
-                                            <constraint firstAttribute="trailing" secondItem="d5e-yv-t7m" secondAttribute="trailing" constant="20" id="sD4-c5-h2c"/>
-                                            <constraint firstItem="d5e-yv-t7m" firstAttribute="centerY" secondItem="55U-Dn-1mN" secondAttribute="centerY" id="u5e-Yy-jmq"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zzd-0F-EYN">
@@ -374,19 +354,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f66-o3-saQ">
-                                                <rect key="frame" x="315" y="7" width="40" height="36"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="CFe-W4-yIC"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="0">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="expectableProfit:" destination="NyK-wy-Jm1" eventType="touchUpInside" id="T8D-yJ-hJG"/>
-                                                </connections>
-                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wfc-Ek-HRg" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="100" y="25" width="215" height="24"/>
                                                 <userDefinedRuntimeAttributes>
@@ -413,19 +380,22 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gs3-3P-izW">
+                                                <rect key="frame" x="333" y="29" width="13" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="f66-o3-saQ" firstAttribute="leading" secondItem="lRW-xD-xye" secondAttribute="trailing" id="05p-8K-mxX"/>
                                             <constraint firstItem="ZtH-N7-uff" firstAttribute="top" secondItem="Zzd-0F-EYN" secondAttribute="top" id="5a4-Hu-izV"/>
-                                            <constraint firstItem="f66-o3-saQ" firstAttribute="leading" secondItem="Wfc-Ek-HRg" secondAttribute="trailing" id="Du4-6h-s1w"/>
                                             <constraint firstAttribute="bottom" secondItem="Wfc-Ek-HRg" secondAttribute="bottom" constant="26" id="ER5-pA-NXx"/>
-                                            <constraint firstAttribute="trailing" secondItem="f66-o3-saQ" secondAttribute="trailing" constant="20" id="Ldd-ke-eiG"/>
                                             <constraint firstItem="ZtH-N7-uff" firstAttribute="leading" secondItem="Zzd-0F-EYN" secondAttribute="leading" constant="30" id="QVt-hu-yjt"/>
                                             <constraint firstItem="Wfc-Ek-HRg" firstAttribute="top" secondItem="lRW-xD-xye" secondAttribute="bottom" constant="5" id="Ucd-Ei-B2W"/>
                                             <constraint firstItem="lRW-xD-xye" firstAttribute="top" secondItem="ZtH-N7-uff" secondAttribute="top" id="Yy7-cR-39u"/>
                                             <constraint firstItem="Wfc-Ek-HRg" firstAttribute="leading" secondItem="lRW-xD-xye" secondAttribute="leading" id="cET-ZR-YNd"/>
-                                            <constraint firstItem="f66-o3-saQ" firstAttribute="centerY" secondItem="ZtH-N7-uff" secondAttribute="centerY" id="h0e-mg-IAi"/>
                                             <constraint firstItem="lRW-xD-xye" firstAttribute="leading" secondItem="ZtH-N7-uff" secondAttribute="trailing" constant="20" id="yO3-OL-XoX"/>
                                         </constraints>
                                     </view>
@@ -445,19 +415,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AF3-aV-w4r">
-                                                <rect key="frame" x="315" y="7" width="40" height="36"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="8KA-Oi-Ur3"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="0">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="difficulty:" destination="NyK-wy-Jm1" eventType="touchUpInside" id="be9-Zi-0Px"/>
-                                                </connections>
-                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7T9-7W-orj" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="100" y="24.5" width="215" height="24.5"/>
                                                 <userDefinedRuntimeAttributes>
@@ -484,19 +441,22 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWR-nu-OCH">
+                                                <rect key="frame" x="333" y="29" width="13" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="7T9-7W-orj" firstAttribute="top" secondItem="V9H-jI-SXu" secondAttribute="bottom" constant="5" id="3Qh-iz-87p"/>
-                                            <constraint firstItem="AF3-aV-w4r" firstAttribute="centerY" secondItem="yxb-hW-DiB" secondAttribute="centerY" id="42C-Y5-YPN"/>
-                                            <constraint firstItem="AF3-aV-w4r" firstAttribute="leading" secondItem="V9H-jI-SXu" secondAttribute="trailing" id="5z2-VY-6WF"/>
-                                            <constraint firstItem="AF3-aV-w4r" firstAttribute="leading" secondItem="7T9-7W-orj" secondAttribute="trailing" id="6mo-dI-wSg"/>
                                             <constraint firstItem="yxb-hW-DiB" firstAttribute="top" secondItem="JWw-Y0-lfV" secondAttribute="top" id="A75-N2-1I6"/>
                                             <constraint firstItem="V9H-jI-SXu" firstAttribute="top" secondItem="yxb-hW-DiB" secondAttribute="top" id="BvD-w8-AgE"/>
                                             <constraint firstItem="yxb-hW-DiB" firstAttribute="leading" secondItem="JWw-Y0-lfV" secondAttribute="leading" constant="30" id="CTE-1Q-ITQ"/>
                                             <constraint firstAttribute="bottom" secondItem="7T9-7W-orj" secondAttribute="bottom" constant="26" id="Mgl-FX-vJM"/>
                                             <constraint firstItem="V9H-jI-SXu" firstAttribute="leading" secondItem="yxb-hW-DiB" secondAttribute="trailing" constant="20" id="beI-9o-TWM"/>
-                                            <constraint firstAttribute="trailing" secondItem="AF3-aV-w4r" secondAttribute="trailing" constant="20" id="sVQ-52-4dq"/>
                                             <constraint firstItem="7T9-7W-orj" firstAttribute="leading" secondItem="V9H-jI-SXu" secondAttribute="leading" id="zlr-Sv-I2s"/>
                                         </constraints>
                                     </view>
@@ -551,9 +511,13 @@
                         <outlet property="categoryButton" destination="WOV-j7-Uu2" id="VYp-2X-qOm"/>
                         <outlet property="descriptionTextView" destination="gqL-63-fjy" id="Gdl-DC-JeX"/>
                         <outlet property="difficultyCosmosView" destination="7T9-7W-orj" id="ymf-Np-lgJ"/>
+                        <outlet property="difficultyLabel" destination="DWR-nu-OCH" id="UFG-NP-HZb"/>
+                        <outlet property="expectedProfitLabel" destination="gs3-3P-izW" id="Ecq-Yk-IR9"/>
                         <outlet property="profitCosmosView" destination="Wfc-Ek-HRg" id="KnD-CS-OT8"/>
                         <outlet property="requiredMoneyCosmosView" destination="gpd-Vl-mDe" id="mbF-Qr-v70"/>
+                        <outlet property="requiredMoneyLabel" destination="BmM-qv-3V7" id="cmX-T7-Dds"/>
                         <outlet property="timeToMarketCosmosView" destination="wJQ-EF-6py" id="g8E-ep-lXP"/>
+                        <outlet property="timeToMarketLabel" destination="Jqi-Jj-Agh" id="dPd-Q8-EOn"/>
                         <outlet property="titleTextField" destination="KLx-QL-Nrs" id="bfy-H1-9uY"/>
                         <segue destination="6BU-ph-8iQ" kind="show" identifier="showManageCategories" id="xLn-nY-OAB"/>
                         <segue destination="sb6-3h-LHL" kind="show" identifier="showAddCategory" id="j6K-q2-1Zm"/>
@@ -763,6 +727,6 @@
         <image name="white_category_icon" width="8" height="8"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RGI-pv-eAq"/>
+        <segue reference="j6K-q2-1Zm"/>
     </inferredMetricsTieBreakers>
 </document>
