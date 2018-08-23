@@ -12,6 +12,10 @@ import KMPlaceholderTextView
 
 class AddIdeaViewController: UIViewController {
     
+    private enum Constant {
+        static let defaultRating: Double = 5
+    }
+    
     @IBOutlet weak var categoryButton: UIButton!
     
     private var selectedCategory: Category? {
@@ -28,10 +32,29 @@ class AddIdeaViewController: UIViewController {
     @IBOutlet weak var expectedProfitLabel: UILabel!
     @IBOutlet weak var difficultyLabel: UILabel!
     
-    @IBOutlet weak var timeToMarketCosmosView: CosmosView!
-    @IBOutlet weak var requiredMoneyCosmosView: CosmosView!
-    @IBOutlet weak var profitCosmosView: CosmosView!
-    @IBOutlet weak var difficultyCosmosView: CosmosView!
+    @IBOutlet weak var timeToMarketCosmosView: CosmosView! {
+        didSet {
+            timeToMarketCosmosView.rating = Constant.defaultRating
+        }
+    }
+    
+    @IBOutlet weak var requiredMoneyCosmosView: CosmosView! {
+        didSet {
+            requiredMoneyCosmosView.rating = Constant.defaultRating
+        }
+    }
+    
+    @IBOutlet weak var profitCosmosView: CosmosView! {
+        didSet {
+            profitCosmosView.rating = Constant.defaultRating
+        }
+    }
+    
+    @IBOutlet weak var difficultyCosmosView: CosmosView! {
+        didSet {
+            difficultyCosmosView.rating = Constant.defaultRating
+        }
+    }
     
     @IBOutlet weak var descriptionTextView: KMPlaceholderTextView! {
         didSet {
@@ -43,31 +66,25 @@ class AddIdeaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupRatings()
+    }
+    
+    
+    // MARK: - Private
+    
+    private func setupRatings() {
+        let updateRating: (Double) -> Void = { [weak self] (rating) in
+            self?.timeToMarketCosmosView.rating = rating.rounded(.up)
+            self?.timeToMarketLabel.text = String(Int(rating.rounded(.up)))
+        }
         
-        timeToMarketCosmosView.rating = 5
-        requiredMoneyCosmosView.rating = 5
-        profitCosmosView.rating = 5
-        difficultyCosmosView.rating = 5
+        timeToMarketCosmosView?.didTouchCosmos = updateRating
         
-        timeToMarketCosmosView?.didTouchCosmos =
-            {(rating:Double)->() in
-                self.timeToMarketCosmosView.rating = rating.rounded(.up)
-                self.timeToMarketLabel.text = String(Int(rating.rounded(.up)))}
+        requiredMoneyCosmosView?.didTouchCosmos = updateRating
         
-        requiredMoneyCosmosView?.didTouchCosmos =
-            {(rating:Double)->() in
-                self.requiredMoneyCosmosView.rating = rating.rounded(.up)
-                self.requiredMoneyLabel.text = String(Int(rating.rounded(.up)))}
+        profitCosmosView?.didTouchCosmos = updateRating
         
-        profitCosmosView?.didTouchCosmos =
-            {(rating:Double)->() in
-                self.profitCosmosView.rating = rating.rounded(.up)
-                self.expectedProfitLabel.text = String(Int(rating.rounded(.up)))}
-        
-        difficultyCosmosView?.didTouchCosmos =
-            {(rating:Double)->() in
-                self.difficultyCosmosView.rating = rating.rounded(.up)
-                self.difficultyLabel.text = String(Int(rating.rounded(.up)))}
+        difficultyCosmosView?.didTouchCosmos = updateRating
     }
     
     private func calculateScore(timeToMarket: Int, requiredMoney: Int, expectableProfit: Int, difficulty: Int) -> Double {
