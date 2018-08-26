@@ -73,18 +73,18 @@ class AddIdeaViewController: UIViewController {
     // MARK: - Private
     
     private func setupRatings() {
-        let updateRating: (Double) -> Void = { [weak self] (rating) in
-            self?.timeToMarketCosmosView.rating = rating.rounded(.up)
-            self?.timeToMarketLabel.text = String(Int(rating.rounded(.up)))
+        func updateRating(ratingView: CosmosView, ratingLabel: UILabel) {
+            let updateRating: (Double) -> Void = { (rating) in
+                ratingView.rating = rating.rounded(.up)
+                ratingLabel.text = String(Int(rating.rounded(.up)))
+            }
+            ratingView.didTouchCosmos = updateRating
         }
         
-        timeToMarketCosmosView?.didTouchCosmos = updateRating
-        
-        requiredMoneyCosmosView?.didTouchCosmos = updateRating
-        
-        profitCosmosView?.didTouchCosmos = updateRating
-        
-        difficultyCosmosView?.didTouchCosmos = updateRating
+        updateRating(ratingView: timeToMarketCosmosView, ratingLabel: timeToMarketLabel)
+        updateRating(ratingView: requiredMoneyCosmosView, ratingLabel: requiredMoneyLabel)
+        updateRating(ratingView: profitCosmosView, ratingLabel: expectedProfitLabel)
+        updateRating(ratingView: difficultyCosmosView, ratingLabel: difficultyLabel)
     }
     
     private func calculateScore(timeToMarket: Int, requiredMoney: Int, expectableProfit: Int, difficulty: Int) -> Double {
