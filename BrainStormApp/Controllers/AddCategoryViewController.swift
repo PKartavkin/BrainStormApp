@@ -80,11 +80,21 @@ class AddCategoryViewController: UIViewController {
                 UIHelper.showErrorAlert(with: "Please select color")
                 return
         }
+
+        // COULD BE REFACTORED
+        if let category = category {
+            category.color = selectedColor
+            category.title = name
+            category.colorTitle = colorName
+            category.icon = colorImage
+            DatabaseManager.edit(category: category)
+        } else {
         
-        DatabaseManager.addCategory(name,
-                                    color: selectedColor,
-                                    colorName: colorName,
-                                    icon: colorImage)
+            DatabaseManager.addCategory(name,
+                                        color: selectedColor,
+                                        colorName: colorName,
+                                        icon: colorImage)
+        }
         
         navigationController?.popViewController(animated: true)
     }

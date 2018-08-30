@@ -16,8 +16,8 @@ class DatabaseManager {
         CoreStore.perform(
             asynchronous: { (transaction) -> Void in
                 let category = transaction.create(Into<Category>())
+                category.id = category.randomInt64()
                 category.title = name
-                
                 
                 category.color = color
                 category.icon = icon
@@ -62,9 +62,11 @@ class DatabaseManager {
                         difficulty: Int16,
                         rating: Double,
                         category: Category?) -> Void {
+
         CoreStore.perform(
             asynchronous: { (transaction) -> Void in
                 let idea = transaction.create(Into<Idea>())
+                idea.id = idea.randomInt64()
                 idea.title = name
                 idea.desc = description
                 idea.timeToMarket = timeToMarket
@@ -82,6 +84,50 @@ class DatabaseManager {
             completion: { (result) -> Void in
                 switch result {
                 case .success: print("Idea added")
+                case .failure(let error): print(error)
+                }
+        })
+    }
+
+    static func edit(idea: Idea) -> Void {
+        CoreStore.perform(
+            asynchronous: { (transaction) -> Void in
+                guard let currentIdea = transaction.fetchOne(From<Idea>().where(\.id == idea.id)) else {
+                    return
+                }
+
+                let category = transaction.fetchExisting(idea.category!)
+                currentIdea.title = idea.title
+                currentIdea.category = category
+                currentIdea.desc = idea.desc
+                currentIdea.timeToMarket = idea.timeToMarket
+                currentIdea.expectedProfit = idea.expectedProfit
+                currentIdea.requiredMoney = idea.requiredMoney
+                currentIdea.difficulty = idea.difficulty
+        },
+            completion: { (result) -> Void in
+                switch result {
+                case .success: print("Idea edited")
+                case .failure(let error): print(error)
+                }
+        })
+    }
+
+    static func edit(category: Category) -> Void {
+        CoreStore.perform(
+            asynchronous: { (transaction) -> Void in
+                guard let currentCategory = transaction.fetchOne(From<Category>().where(\.id == category.id)) else {
+                    return
+                }
+
+                currentCategory.color = category.color
+                currentCategory.colorTitle = category.colorTitle
+                currentCategory.icon = category.icon
+                currentCategory.title = category.title
+        },
+            completion: { (result) -> Void in
+                switch result {
+                case .success: print("Idea edited")
                 case .failure(let error): print(error)
                 }
         })
