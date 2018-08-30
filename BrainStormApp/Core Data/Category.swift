@@ -11,7 +11,8 @@ import UIKit
 
 @objc(Category)
 class Category: NSManagedObject {
-    
+
+    @NSManaged var id: Int64
     @NSManaged var title: String
     @NSManaged var color: UIColor
     @NSManaged var colorTitle: String

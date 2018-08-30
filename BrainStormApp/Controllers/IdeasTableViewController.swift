@@ -11,6 +11,15 @@ import CoreStore
 class IdeasTableViewController: UITableViewController {
     
     private var ideas: ListMonitor<Idea>!
+
+    private var selectedIdea: Idea? {
+        didSet {
+            guard let idea = selectedIdea else {
+                return
+            }
+            performSegue(withIdentifier: R.segue.ideasTableViewController.createIdeaButtonSegue.identifier, sender: nil)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +28,22 @@ class IdeasTableViewController: UITableViewController {
     
     deinit {
         ideas.removeObserver(self)
+    }
+
+    //MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else {
+            return
+        }
+        switch identifier {
+        case R.segue.ideasTableViewController.createIdeaButtonSegue.identifier:
+            if let destinationVC = segue.destination as? AddIdeaViewController,
+                let selectedIdea = selectedIdea {
+                destinationVC.configure(with: selectedIdea)
+            }
+        default: break
+        }
     }
     
     // MARK: - Private
@@ -59,6 +84,10 @@ extension IdeasTableViewController: ListSectionObserver {
     
     func listMonitor(_ monitor: ListMonitor<Idea>, didDeleteObject object: Idea, fromIndexPath indexPath: IndexPath) {
         tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+
+    func listMonitor(_ monitor: ListMonitor<Idea>, didUpdateObject object: Idea, atIndexPath indexPath: IndexPath) {
+        tableView.reloadRows(at: [indexPath], with: .fade)
     }
     
     func listMonitorDidChange(_ monitor: ListMonitor<Idea>) {
@@ -108,7 +137,14 @@ extension IdeasTableViewController {
             let idea = self!.ideas.objectsInAllSections()[indexPath.row]
             DatabaseManager.delete(idea: idea)
         }
+
+        let edit = UITableViewRowAction(style: .normal, title: "Edit") { [weak self] (action, indexPath) in
+            guard let idea = self?.ideas.objectsInAllSections()[indexPath.row] else {
+                return
+            }
+            self?.selectedIdea = idea
+        }
         
-        return [delete]
+        return [delete, edit]
     }
 }

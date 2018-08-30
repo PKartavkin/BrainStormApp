@@ -129,6 +129,10 @@ extension ManageCategoriesTableViewController: ListSectionObserver {
     func listMonitor(_ monitor: ListMonitor<Category>, didDeleteObject object: Category, fromIndexPath indexPath: IndexPath) {
         tableView.deleteRows(at: [indexPath], with: .fade)
     }
+
+    func listMonitor(_ monitor: ListMonitor<Category>, didUpdateObject object: Category, atIndexPath indexPath: IndexPath) {
+        tableView.reloadRows(at: [indexPath], with: .fade)
+    }
     
     func listMonitorDidChange(_ monitor: ListMonitor<Category>) {
         tableView.endUpdates()

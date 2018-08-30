@@ -8,9 +8,18 @@
 import Foundation
 import CoreData
 
+extension NSManagedObject {
+    func randomInt64() -> Int64 {
+        var t = Int64()
+        arc4random_buf(&t, MemoryLayout<Int64>.size)
+        return t
+    }
+}
+
 @objc(Idea)
 class Idea: NSManagedObject {
-    
+
+    @NSManaged var id: Int64
     @NSManaged var title: String
     @NSManaged var desc: String
     @NSManaged var timeToMarket: Int16
