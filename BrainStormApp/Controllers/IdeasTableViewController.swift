@@ -23,7 +23,16 @@ class IdeasTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if !isLaunchedBefore()  {
+            UIHelper.showGreetingAlert()
+        }
         loadData()
+    }
+    
+    private func isLaunchedBefore() -> Bool {
+        let isLaunchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore") ? true : false
+        UserDefaults.standard.set(true, forKey: "launchedBefore")
+        return isLaunchedBefore
     }
     
     deinit {
