@@ -65,6 +65,12 @@ class AddIdeaViewController: UIViewController {
     }
     
     @IBOutlet weak var titleTextField: UITextField!
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        selectedCategory = idea?.category
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
