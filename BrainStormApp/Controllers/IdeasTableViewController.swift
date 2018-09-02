@@ -156,4 +156,9 @@ extension IdeasTableViewController {
         
         return [delete, edit]
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let idea = ideas.objectsInAllSections()[indexPath.row]
+        selectedIdea = idea
+    }
 }
