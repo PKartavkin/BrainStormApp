@@ -15,7 +15,12 @@ class AddCategoryViewController: UIViewController {
     @IBOutlet weak var colorImageView: UIImageView!
     
 
-    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var colorLabel: UILabel! {
+        didSet {
+            let tap = UITapGestureRecognizer(target: self, action: #selector(changeColor))
+            colorLabel.addGestureRecognizer(tap)
+        }
+    }
     @IBOutlet weak var nameTextField: UITextField!
     
     
