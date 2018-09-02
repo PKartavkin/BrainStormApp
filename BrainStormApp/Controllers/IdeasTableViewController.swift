@@ -164,15 +164,8 @@ extension IdeasTableViewController {
             let idea = self!.ideas.objectsInAllSections()[indexPath.row]
             DatabaseManager.delete(idea: idea)
         }
-
-        let edit = UITableViewRowAction(style: .normal, title: "Edit") { [weak self] (action, indexPath) in
-            guard let idea = self?.ideas.objectsInAllSections()[indexPath.row] else {
-                return
-            }
-            self?.selectedIdea = idea
-        }
         
-        return [delete, edit]
+        return [delete]
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
