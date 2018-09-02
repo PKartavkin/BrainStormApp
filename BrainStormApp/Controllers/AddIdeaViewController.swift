@@ -135,6 +135,11 @@ class AddIdeaViewController: UIViewController {
             self?.selectedCategory = category
         }
     }
+
+    @IBAction func tap(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+
     
     @IBAction func done(_ sender: UIBarButtonItem) {
         guard let title = titleTextField.text, !title.isEmpty else {
