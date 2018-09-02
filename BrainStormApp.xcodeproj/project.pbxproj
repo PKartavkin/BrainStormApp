@@ -17,6 +17,7 @@
 		B26AEB8F20FE9B2C003D1743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26AEB8E20FE9B2C003D1743 /* Assets.xcassets */; };
 		B26AEB9220FE9B2C003D1743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B26AEB9020FE9B2C003D1743 /* LaunchScreen.storyboard */; };
 		B26AEB9B20FEA698003D1743 /* AppInitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26AEB9A20FEA698003D1743 /* AppInitialization.swift */; };
+		B284B4D0213B745300D3CB85 /* UIBarButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B284B4CF213B745300D3CB85 /* UIBarButton+Extension.swift */; };
 		B28DE1E520FEACB300A75EDF /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28DE1E420FEACB300A75EDF /* CustomNavigationController.swift */; };
 		B28DE1E820FEAD7D00A75EDF /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28DE1E720FEAD7D00A75EDF /* AppConstants.swift */; };
 		B28DE1EA20FEADA100A75EDF /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28DE1E920FEADA100A75EDF /* UIConstants.swift */; };
@@ -45,6 +46,7 @@
 		B26AEB9120FE9B2C003D1743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B26AEB9320FE9B2C003D1743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B26AEB9A20FEA698003D1743 /* AppInitialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInitialization.swift; sourceTree = "<group>"; };
+		B284B4CF213B745300D3CB85 /* UIBarButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButton+Extension.swift"; sourceTree = "<group>"; };
 		B28DE1E420FEACB300A75EDF /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		B28DE1E720FEAD7D00A75EDF /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		B28DE1E920FEADA100A75EDF /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 		B2FA9D382104024200DFF1C5 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		B2FA9D3D210408AE00DFF1C5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C2A3D9815BFCF9342A97A141 /* Pods-BrainStormApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStormApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrainStormApp/Pods-BrainStormApp.debug.xcconfig"; sourceTree = "<group>"; };
-        E987EFAD2122275600AA89E2 /* BrainStormMarksFields.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrainStormMarksFields.xcdatamodel; sourceTree = "<group>"; };
+		E987EFAD2122275600AA89E2 /* BrainStormMarksFields.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrainStormMarksFields.xcdatamodel; sourceTree = "<group>"; };
 		E987EFAE21222A8900AA89E2 /* BrainStormUpdated.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrainStormUpdated.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				B26AEB9A20FEA698003D1743 /* AppInitialization.swift */,
+				B284B4CF213B745300D3CB85 /* UIBarButton+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2D5B81A2114AA1100AF9C39 /* AddCategoryViewController.swift in Sources */,
+				B284B4D0213B745300D3CB85 /* UIBarButton+Extension.swift in Sources */,
 				B2D5B81421148B0500AF9C39 /* ManageCategoriesTableViewController.swift in Sources */,
 				B28DE1E520FEACB300A75EDF /* CustomNavigationController.swift in Sources */,
 				B26AEB9B20FEA698003D1743 /* AppInitialization.swift in Sources */,

@@ -34,7 +34,8 @@ class Idea: NSManagedObject {
         var ideaTxt = ""
         ideaTxt += "Title: \(title) \n"
         if let categoryUnwrapped = category {
-            ideaTxt += "Category: \(categoryUnwrapped) \n"
+            // There was a bug that you print the whole object like in the console 
+            ideaTxt += "Category: \(asString(category: categoryUnwrapped)) \n"
         } else {
             ideaTxt += "Category: none \n"
         }
@@ -45,5 +46,11 @@ class Idea: NSManagedObject {
         ideaTxt += "Difficulty: \(difficulty) \n"
         ideaTxt += "Score: \(score) \n"
         return ideaTxt
+    }
+
+    // I think we should return only the name
+
+    private func asString(category: Category) -> String {
+        return category.title
     }
 }

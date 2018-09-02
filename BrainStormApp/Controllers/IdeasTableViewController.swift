@@ -9,14 +9,17 @@ import UIKit
 import CoreStore
 
 class IdeasTableViewController: UITableViewController {
-    
+
+    private enum Const {
+        static let ideaSeparator = "********************** \n"
+    }
+
     private var ideas: ListMonitor<Idea>!
+
+    @IBOutlet weak var exportButton: UIBarButtonItem!
 
     private var selectedIdea: Idea? {
         didSet {
-            guard let idea = selectedIdea else {
-                return
-            }
             performSegue(withIdentifier: R.segue.ideasTableViewController.createIdeaButtonSegue.identifier, sender: nil)
         }
     }
@@ -27,12 +30,7 @@ class IdeasTableViewController: UITableViewController {
             UIHelper.showGreetingAlert()
         }
         loadData()
-    }
-    
-    private func isLaunchedBefore() -> Bool {
-        let isLaunchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore") ? true : false
-        UserDefaults.standard.set(true, forKey: "launchedBefore")
-        return isLaunchedBefore
+        setupExportButton()
     }
     
     deinit {
@@ -56,6 +54,20 @@ class IdeasTableViewController: UITableViewController {
     }
     
     // MARK: - Private
+
+    private func hasIdeas() -> Bool {
+        return ideas.objectsInAllSections().count > 0
+    }
+
+    private func setupExportButton() {
+        exportButton.isHidden = !hasIdeas()
+    }
+
+    private func isLaunchedBefore() -> Bool {
+        let isLaunchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore") ? true : false
+        UserDefaults.standard.set(true, forKey: "launchedBefore")
+        return isLaunchedBefore
+    }
     
     private func loadData() {
         ideas = CoreStore.monitorList(From<Idea>(), OrderBy<Idea>(
@@ -65,16 +77,20 @@ class IdeasTableViewController: UITableViewController {
     }
     
     func exportIdeasToClipboard() {
-        var ideasTxt = ""
-        for idea in ideas.objectsInAllSections() {
-            ideasTxt += idea.getIdeaAsString()
-            ideasTxt += "********************** \n"
-        }
+        let ideasTxt = ideas.objectsInAllSections()
+            .map {$0.getIdeaAsString()}
+            .joined(separator: Const.ideaSeparator)
         let clipboard = UIPasteboard.general
         clipboard.string = ideasTxt
     }
     
     // MARK: - IBAction
+
+    @IBAction func export(_ sender: UIBarButtonItem) {
+        UIHelper.showExportAlert(with: ideas.objectsInAllSections().count)
+        exportIdeasToClipboard()
+    }
+
 }
 
 //MARK: - ListSectionObserver
@@ -89,10 +105,12 @@ extension IdeasTableViewController: ListSectionObserver {
     
     func listMonitor(_ monitor: ListMonitor<Idea>, didInsertObject object: Idea, toIndexPath indexPath: IndexPath) {
         tableView.insertRows(at: [indexPath], with: .fade)
+        setupExportButton()
     }
     
     func listMonitor(_ monitor: ListMonitor<Idea>, didDeleteObject object: Idea, fromIndexPath indexPath: IndexPath) {
         tableView.deleteRows(at: [indexPath], with: .fade)
+        setupExportButton()
     }
 
     func listMonitor(_ monitor: ListMonitor<Idea>, didUpdateObject object: Idea, atIndexPath indexPath: IndexPath) {
