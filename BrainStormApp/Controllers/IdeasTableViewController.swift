@@ -51,6 +51,7 @@ class IdeasTableViewController: UITableViewController {
                 let selectedIdea = selectedIdea {
                 destinationVC.configure(with: selectedIdea)
             }
+            selectedIdea = nil
         default: break
         }
     }
