@@ -18,10 +18,11 @@ class IdeasTableViewController: UITableViewController {
 
     @IBOutlet weak var exportButton: UIBarButtonItem!
 
-    private var selectedIdea: Idea? {
-        didSet {
-            performSegue(withIdentifier: R.segue.ideasTableViewController.createIdeaButtonSegue.identifier, sender: nil)
-        }
+    private var selectedIdea: Idea?
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -46,10 +47,10 @@ class IdeasTableViewController: UITableViewController {
         switch identifier {
         case R.segue.ideasTableViewController.createIdeaButtonSegue.identifier:
             if let destinationVC = segue.destination as? AddIdeaViewController,
-                let selectedIdea = selectedIdea {
-                destinationVC.configure(with: selectedIdea)
+                let idea = selectedIdea {
+                destinationVC.configure(with: idea)
+                selectedIdea = nil
             }
-            selectedIdea = nil
         default: break
         }
     }
@@ -172,5 +173,6 @@ extension IdeasTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let idea = ideas.objectsInAllSections()[indexPath.row]
         selectedIdea = idea
+        performSegue(withIdentifier: R.segue.ideasTableViewController.createIdeaButtonSegue.identifier, sender: nil)
     }
 }
