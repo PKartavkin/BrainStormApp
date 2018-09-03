@@ -96,9 +96,10 @@ class DatabaseManager {
                     return
                 }
 
-                let category = transaction.fetchExisting(idea.category!)
                 currentIdea.title = idea.title
-                currentIdea.category = category
+                if let currentCategory = idea.category {
+                    currentIdea.category = transaction.fetchExisting(currentCategory)
+                }
                 currentIdea.desc = idea.desc
                 currentIdea.timeToMarket = idea.timeToMarket
                 currentIdea.expectedProfit = idea.expectedProfit
