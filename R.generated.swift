@@ -31,24 +31,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 25 images.
+  /// This `R.image` struct is generated, and contains static references to 20 images.
   struct image {
     /// Image `add_category_icon`.
     static let add_category_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "add_category_icon")
     /// Image `arrow_icon`.
     static let arrow_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "arrow_icon")
-    /// Image `back_icon`.
-    static let back_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "back_icon")
     /// Image `blue_category_icon`.
     static let blue_category_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "blue_category_icon")
-    /// Image `delete_category_icon`.
-    static let delete_category_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "delete_category_icon")
     /// Image `difficulty_icon`.
     static let difficulty_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "difficulty_icon")
-    /// Image `done_icon`.
-    static let done_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "done_icon")
-    /// Image `edit_category_icon`.
-    static let edit_category_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "edit_category_icon")
     /// Image `empty_circle_icon`.
     static let empty_circle_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "empty_circle_icon")
     /// Image `expected_profit_icon`.
@@ -57,8 +49,6 @@ struct R: Rswift.Validatable {
     static let filled_circle_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "filled_circle_icon")
     /// Image `green_category_icon`.
     static let green_category_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "green_category_icon")
-    /// Image `launch_screen_logo`.
-    static let launch_screen_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "launch_screen_logo")
     /// Image `light_blue_category_icon`.
     static let light_blue_category_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "light_blue_category_icon")
     /// Image `manage_category_icon`.
@@ -94,34 +84,14 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.arrow_icon, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "back_icon", bundle: ..., traitCollection: ...)`
-    static func back_icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.back_icon, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "blue_category_icon", bundle: ..., traitCollection: ...)`
     static func blue_category_icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.blue_category_icon, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "delete_category_icon", bundle: ..., traitCollection: ...)`
-    static func delete_category_icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.delete_category_icon, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "difficulty_icon", bundle: ..., traitCollection: ...)`
     static func difficulty_icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.difficulty_icon, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "done_icon", bundle: ..., traitCollection: ...)`
-    static func done_icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.done_icon, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "edit_category_icon", bundle: ..., traitCollection: ...)`
-    static func edit_category_icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.edit_category_icon, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "empty_circle_icon", bundle: ..., traitCollection: ...)`
@@ -142,11 +112,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "green_category_icon", bundle: ..., traitCollection: ...)`
     static func green_category_icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.green_category_icon, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "launch_screen_logo", bundle: ..., traitCollection: ...)`
-    static func launch_screen_logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.launch_screen_logo, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "light_blue_category_icon", bundle: ..., traitCollection: ...)`
