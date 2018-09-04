@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ActionSheetPicker-3.0" "${PODS_CONFIGURATION_BUILD_DIR}/CoreStore" "${PODS_CONFIGURATION_BUILD_DIR}/Cosmos" "${PODS_CONFIGURATION_BUILD_DIR}/KMPlaceholderTextView" "${PODS_CONFIGURATION_BUILD_DIR}/R.swift.Library"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CoreStore" "${PODS_CONFIGURATION_BUILD_DIR}/Cosmos" "${PODS_CONFIGURATION_BUILD_DIR}/KMPlaceholderTextView" "${PODS_CONFIGURATION_BUILD_DIR}/R.swift.Library"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/CoreStore/CoreStore.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Cosmos/Cosmos.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/KMPlaceholderTextView/KMPlaceholderTextView.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/R.swift.Library/Rswift.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "ActionSheetPicker_3_0" -framework "CoreStore" -framework "Cosmos" -framework "KMPlaceholderTextView" -framework "Rswift"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/CoreStore/CoreStore.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Cosmos/Cosmos.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/KMPlaceholderTextView/KMPlaceholderTextView.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/R.swift.Library/Rswift.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "CoreStore" -framework "Cosmos" -framework "KMPlaceholderTextView" -framework "Rswift"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
