@@ -57,11 +57,7 @@ class AddIdeaViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var descriptionTextView: KMPlaceholderTextView! {
-        didSet {
-            descriptionTextView.textContainer.maximumNumberOfLines = 5
-        }
-    }
+    @IBOutlet weak var descriptionTextView: KMPlaceholderTextView!
     
     @IBOutlet weak var titleTextField: UITextField!
 
