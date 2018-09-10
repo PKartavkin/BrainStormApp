@@ -109,8 +109,7 @@ class UIHelper {
     }
     
     static func showGreetingAlert() {
-        //ToDo: update text with greetings + instructions
-        let message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        let message = "Thank you for downloading BrainStorm app! We believe it helps you to find idea for your startup. Don't give up, keep moving forward and be afraid of procrastination."
         showAlert(message: message, title: "Greetings!")
     }
 
