@@ -117,11 +117,12 @@ class AddIdeaViewController: UIViewController {
     }
     
     private func calculateScore(timeToMarket: Int, requiredMoney: Int, expectableProfit: Int, difficulty: Int) -> Double {
-        let timeToMarketNormalizedScore = 2.0 / Double(timeToMarket)
-        let requiredMoneyNormalizedScore = 3.0 / Double(requiredMoney)
-        let expectableProfitNormalizedScore = Double(expectableProfit) / 5.0
-        let difficultyNormalizedScore = 3.0 / Double(difficulty)
-        let score = timeToMarketNormalizedScore + requiredMoneyNormalizedScore + expectableProfitNormalizedScore + difficultyNormalizedScore
+        //zero element is unused
+        let requiredMoneyMapping = [0.0,3.0,2.75,2.5,2.1,1.7,1.2,0.7,0.2,0.1,0.0]
+        let timeToMarketMapping = [0.0,2.0,1.9,1.8,1.6,1.4,1.0,0.6,0.4,0.2,0.0]
+        let expectableProfitMapping = [0.0,0.0,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0]
+        let difficultyMapping = requiredMoneyMapping
+        let score = timeToMarketMapping[timeToMarket] + requiredMoneyMapping[requiredMoney] + expectableProfitMapping[expectableProfit] + difficultyMapping[difficulty]
         let scoreRounded = round(score / 0.1) * 0.1
         return scoreRounded
     }
