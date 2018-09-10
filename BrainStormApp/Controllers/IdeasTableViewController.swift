@@ -29,6 +29,7 @@ class IdeasTableViewController: UITableViewController {
         super.viewDidLoad()
         if !isLaunchedBefore()  {
             UIHelper.showGreetingAlert()
+            presetupCategories()
         }
         loadData()
         setupExportButton()
@@ -69,6 +70,12 @@ class IdeasTableViewController: UITableViewController {
         let isLaunchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore") ? true : false
         UserDefaults.standard.set(true, forKey: "launchedBefore")
         return isLaunchedBefore
+    }
+    
+    private func presetupCategories() {
+        DatabaseManager.addCategory("Retail", color: .blue, colorName: "Blue", icon: #imageLiteral(resourceName: "blue_category_icon"))
+        DatabaseManager.addCategory("Mobile apps", color: .green, colorName: "Green", icon: #imageLiteral(resourceName: "green_category_icon"))
+        DatabaseManager.addCategory("Media", color: .orange, colorName: "Orange", icon: #imageLiteral(resourceName: "orange_category_icon"))
     }
     
     private func loadData() {
