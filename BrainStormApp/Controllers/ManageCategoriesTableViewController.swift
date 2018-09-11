@@ -79,13 +79,12 @@ extension ManageCategoriesTableViewController {
             DatabaseManager.delete(category: category)
         }
         
-        let edit = UITableViewRowAction(style: .normal, title: "Edit") { [weak self] (action, indexPath) in
-            self?.selectedCategory = self!.categories.objectsInAllSections()[indexPath.row]
-        }
-        
-        edit.backgroundColor = .orange
-        
-        return [delete, edit]
+        return [delete]
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = categories.objectsInAllSections()[indexPath.row]
+        selectedCategory = category
     }
 }
 
