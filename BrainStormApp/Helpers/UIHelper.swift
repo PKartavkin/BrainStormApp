@@ -59,6 +59,12 @@ class UIHelper {
             alert.addAction(action)
         }
         
+        let noCategoryAction = UIAlertAction(title: "No category", style: .default) { _ in
+            completionHandler(nil)
+        }
+        noCategoryAction.setValue(UIColor.black, forKey: Const.actionTitleKey)
+        alert.addAction(noCategoryAction)
+        
         alert.addAction(createAction(title: "Add Category", image: #imageLiteral(resourceName: "add_category_icon")) { _ in
             UIApplication.topViewController()?.performSegue(withIdentifier: R.segue.addIdeaViewController.showAddCategory.identifier, sender: nil)
             completionHandler(nil)

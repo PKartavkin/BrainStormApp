@@ -20,6 +20,7 @@ class AddIdeaViewController: UIViewController {
     private var selectedCategory: Category? {
         didSet {
             guard let selectedCategory = selectedCategory else {
+                categoryButton.setTitle("No category", for: .normal)
                 return
             }
             categoryButton.setTitle(selectedCategory.title, for: .normal)
@@ -131,9 +132,6 @@ class AddIdeaViewController: UIViewController {
 
     @IBAction func selectCategory(_ sender: UIButton) {
         UIHelper.showCategoryAction(from: self) { [weak self] category in
-            guard let category = category else {
-                return
-            }
             self?.selectedCategory = category
         }
     }
