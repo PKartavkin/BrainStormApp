@@ -99,6 +99,8 @@ class DatabaseManager {
                 currentIdea.title = idea.title
                 if let currentCategory = idea.category {
                     currentIdea.category = transaction.fetchExisting(currentCategory)
+                } else {
+                    currentIdea.category = nil
                 }
                 currentIdea.desc = idea.desc
                 currentIdea.timeToMarket = idea.timeToMarket
