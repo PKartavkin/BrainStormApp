@@ -18,16 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_image" translatesAutoresizingMaskIntoConstraints="NO" id="PSW-pv-P1S">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_logo" translatesAutoresizingMaskIntoConstraints="NO" id="raX-1B-KYF">
+                                <rect key="frame" x="82.5" y="183.5" width="210" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="CA1-xv-sdi"/>
+                                    <constraint firstAttribute="height" constant="300" id="vN3-SD-iiw"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.4392156862745098" green="0.67450980392156867" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.082352941176470587" green="0.60392156862745094" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="PSW-pv-P1S" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Co4-US-GW2"/>
-                            <constraint firstAttribute="bottom" secondItem="PSW-pv-P1S" secondAttribute="bottom" id="PXf-um-c9i"/>
-                            <constraint firstItem="PSW-pv-P1S" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="S9u-rw-sdU"/>
-                            <constraint firstItem="PSW-pv-P1S" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="orR-qt-bQo"/>
+                            <constraint firstItem="raX-1B-KYF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="QWO-7a-PtP"/>
+                            <constraint firstItem="raX-1B-KYF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fUA-Pr-EhJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="test_image" width="375" height="667"/>
+        <image name="launch_logo" width="177" height="278"/>
     </resources>
 </document>
