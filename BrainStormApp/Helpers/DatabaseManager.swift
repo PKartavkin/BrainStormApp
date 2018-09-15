@@ -107,6 +107,7 @@ class DatabaseManager {
                 currentIdea.expectedProfit = idea.expectedProfit
                 currentIdea.requiredMoney = idea.requiredMoney
                 currentIdea.difficulty = idea.difficulty
+                currentIdea.score = idea.score
         },
             completion: { (result) -> Void in
                 switch result {
