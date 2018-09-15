@@ -31,7 +31,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 20 images.
+  /// This `R.image` struct is generated, and contains static references to 21 images.
   struct image {
     /// Image `add_category_icon`.
     static let add_category_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "add_category_icon")
@@ -49,6 +49,8 @@ struct R: Rswift.Validatable {
     static let filled_circle_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "filled_circle_icon")
     /// Image `green_category_icon`.
     static let green_category_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "green_category_icon")
+    /// Image `launch_logo`.
+    static let launch_logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "launch_logo")
     /// Image `light_blue_category_icon`.
     static let light_blue_category_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "light_blue_category_icon")
     /// Image `manage_category_icon`.
@@ -112,6 +114,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "green_category_icon", bundle: ..., traitCollection: ...)`
     static func green_category_icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.green_category_icon, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "launch_logo", bundle: ..., traitCollection: ...)`
+    static func launch_logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.launch_logo, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "light_blue_category_icon", bundle: ..., traitCollection: ...)`
@@ -311,7 +318,7 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
       
       static func validate() throws {
-        if UIKit.UIImage(named: "test_image") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'test_image' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "launch_logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'launch_logo' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
