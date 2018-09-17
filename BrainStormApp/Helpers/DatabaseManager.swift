@@ -26,7 +26,7 @@ class DatabaseManager {
         },
             completion: { (result) -> Void in
                 switch result {
-                case .success: print("Catrgory added")
+                case .success: print("Category added")
                 case .failure(let error): print(error)
                 }
         })
@@ -131,7 +131,7 @@ class DatabaseManager {
         },
             completion: { (result) -> Void in
                 switch result {
-                case .success: print("Idea edited")
+                case .success: print("Category edited")
                 case .failure(let error): print(error)
                 }
         })

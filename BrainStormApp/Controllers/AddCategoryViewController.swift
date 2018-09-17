@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddCategoryViewController: UIViewController {
+class AddCategoryViewController: UIViewController, UITextFieldDelegate {
     
     private var category: Category?
     private var selectedColor: UIColor?
@@ -28,6 +28,14 @@ class AddCategoryViewController: UIViewController {
         super.viewDidLoad()
         loadData()
         setImageTapGesture()
+        nameTextField.delegate = self
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentText = textField.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else { return false }
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+        return updatedText.count <= 36
     }
     
     // MARK: - Public
@@ -75,7 +83,7 @@ class AddCategoryViewController: UIViewController {
     @IBAction func save(_ sender: UIBarButtonItem) {
         
         guard let name = nameTextField.text, !name.isEmpty else {
-            UIHelper.showErrorAlert(with: "Please enter title")
+            UIHelper.showErrorAlert(with: "Please enter category name")
             return
         }
         

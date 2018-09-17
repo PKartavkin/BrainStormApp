@@ -37,7 +37,7 @@ class UIHelper {
     }
     
     class func showCategoryAction(from viewController: UIViewController,
-                                  completionHandler: @escaping ((Category?) -> Void)) {
+                                  completionHandler: @escaping ((Category?,Bool) -> Void)) {
         
         func createAction(title: String, image: UIImage, completionHandler: @escaping (UIAlertAction) -> ()) -> UIAlertAction {
             let action = UIAlertAction(title: title, style: .default, handler: completionHandler)
@@ -50,7 +50,7 @@ class UIHelper {
         
         for category in DatabaseManager.categories() {
             let action = UIAlertAction(title: category.title, style: .default) { _ in
-                completionHandler(category)
+                completionHandler(category, false)
             }
             
             action.setValue(category.icon, forKey: Const.actionImageKey)
@@ -60,23 +60,23 @@ class UIHelper {
         }
         
         let noCategoryAction = UIAlertAction(title: "No category", style: .default) { _ in
-            completionHandler(nil)
+            completionHandler(nil, false)
         }
         noCategoryAction.setValue(UIColor.black, forKey: Const.actionTitleKey)
         alert.addAction(noCategoryAction)
         
         alert.addAction(createAction(title: "Add Category", image: #imageLiteral(resourceName: "add_category_icon")) { _ in
             UIApplication.topViewController()?.performSegue(withIdentifier: R.segue.addIdeaViewController.showAddCategory.identifier, sender: nil)
-            completionHandler(nil)
+            completionHandler(nil, false)
         })
         
         alert.addAction(createAction(title: "Manage categories", image: #imageLiteral(resourceName: "manage_category_icon")) { _ in
             UIApplication.topViewController()?.performSegue(withIdentifier: R.segue.addIdeaViewController.showManageCategories.identifier, sender: nil)
-            completionHandler(nil)
+            completionHandler(nil, false)
         })
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { _ in
-            completionHandler(nil)
+            completionHandler(nil, true)
         })
         
         viewController.present(alert, animated: true, completion: nil)
@@ -111,7 +111,7 @@ class UIHelper {
 
     static func showErrorAlert(with errorDescription: String?) {
         let message = errorDescription ?? "Something went wrong"
-        showAlert(message: message, title: "Oops")
+        showAlert(message: message, title: "")
     }
     
     static func showGreetingAlert() {

@@ -9,7 +9,7 @@ import UIKit
 import Cosmos
 import KMPlaceholderTextView
 
-class AddIdeaViewController: UIViewController {
+class AddIdeaViewController: UIViewController, UITextFieldDelegate {
     
     private enum Constant {
         static let defaultRating: Double = 5
@@ -72,7 +72,16 @@ class AddIdeaViewController: UIViewController {
         super.viewDidLoad()
         setupRatings()
         fillIdea()
+        titleTextField.delegate = self
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentText = textField.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else { return false }
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+        return updatedText.count <= 32
+    }
+    
 
     // MARK: - Public
 
@@ -131,8 +140,10 @@ class AddIdeaViewController: UIViewController {
     // MARK: - IBAction
 
     @IBAction func selectCategory(_ sender: UIButton) {
-        UIHelper.showCategoryAction(from: self) { [weak self] category in
-            self?.selectedCategory = category
+        UIHelper.showCategoryAction(from: self) { [weak self] category, cancelClicked in
+            if (!cancelClicked) {
+                self?.selectedCategory = category
+            }
         }
     }
 
@@ -143,12 +154,12 @@ class AddIdeaViewController: UIViewController {
     
     @IBAction func done(_ sender: UIBarButtonItem) {
         guard let title = titleTextField.text, !title.isEmpty else {
-            UIHelper.showErrorAlert(with: "Enter title please")
+            UIHelper.showErrorAlert(with: "Please enter idea name")
             return
         }
         
         guard let description = descriptionTextView.text, !description.isEmpty else {
-            UIHelper.showErrorAlert(with: "Enter description please")
+            UIHelper.showErrorAlert(with: "Please enter description")
             return
         }
         
