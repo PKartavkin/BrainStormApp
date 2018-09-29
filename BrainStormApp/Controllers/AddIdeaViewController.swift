@@ -128,12 +128,12 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate {
     
     private func calculateScore(timeToMarket: Int, requiredMoney: Int, expectableProfit: Int, difficulty: Int) -> Double {
         //zero element is unused
-        let requiredMoneyMapping = [0.0,3.0,2.75,2.5,2.1,1.7,1.2,0.7,0.2,0.1,0.0]
-        let timeToMarketMapping = [0.0,2.0,1.9,1.8,1.6,1.4,1.0,0.6,0.4,0.2,0.0]
-        let expectableProfitMapping = [0.0,0.0,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0]
+        let requiredMoneyMapping = [0.0,3.0,2.8,2.5,2.1,1.7,1.2,0.7,0.2,0.1,-0.3]
+        let timeToMarketMapping = [0.0,2.0,1.9,1.8,1.6,1.4,1.0,0.6,0.4,0.1,-0.3]
+        let expectableProfitMapping = [0.0,-0.3,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0]
         let difficultyMapping = requiredMoneyMapping
         let score = timeToMarketMapping[timeToMarket] + requiredMoneyMapping[requiredMoney] + expectableProfitMapping[expectableProfit] + difficultyMapping[difficulty]
-        let scoreRounded = round(score / 0.1) * 0.1
+        let scoreRounded = score <= 0 ? 0 : round(score * 10) / 10
         return scoreRounded
     }
 
