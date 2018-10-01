@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/pavel/Documents/BrainStormAppMVP/BrainStorm.xcodeproj">
+      location = "group:BrainStormApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
