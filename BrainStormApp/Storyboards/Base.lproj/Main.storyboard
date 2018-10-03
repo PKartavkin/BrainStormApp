@@ -249,13 +249,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Time to market" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwA-VS-EIf">
-                                                <rect key="frame" x="76" y="0.0" width="191.5" height="19.5"/>
+                                                <rect key="frame" x="76" y="0.0" width="196.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSq-7z-OWD" customClass="CosmosView" customModule="Cosmos">
-                                                <rect key="frame" x="76" y="39.5" width="191.5" height="20.5"/>
+                                                <rect key="frame" x="76" y="24.5" width="196.5" height="20.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filled_circle_icon"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="empty_circle_icon"/>
@@ -281,7 +281,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4S-F0-Vsf">
-                                                <rect key="frame" x="282.5" y="16" width="12.5" height="24"/>
+                                                <rect key="frame" x="287.5" y="16" width="12.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -290,17 +290,17 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="1lm-WX-70m"/>
-                                            <constraint firstAttribute="bottom" secondItem="OSq-7z-OWD" secondAttribute="bottom" constant="5" id="4TZ-Cl-kww"/>
+                                            <constraint firstAttribute="bottom" secondItem="OSq-7z-OWD" secondAttribute="bottom" constant="20" id="4TZ-Cl-kww"/>
                                             <constraint firstItem="OSq-7z-OWD" firstAttribute="leading" secondItem="XwA-VS-EIf" secondAttribute="leading" id="7X9-fK-BAE"/>
                                             <constraint firstItem="w4S-F0-Vsf" firstAttribute="top" secondItem="K4u-vQ-Cft" secondAttribute="top" constant="16" id="HgV-C8-na5"/>
                                             <constraint firstItem="w4S-F0-Vsf" firstAttribute="leading" secondItem="XwA-VS-EIf" secondAttribute="trailing" constant="15" id="HpJ-LD-o8m"/>
                                             <constraint firstItem="XwA-VS-EIf" firstAttribute="trailing" secondItem="OSq-7z-OWD" secondAttribute="trailing" id="LhN-Sw-5eU"/>
                                             <constraint firstItem="VwK-FO-Ncq" firstAttribute="top" secondItem="K4u-vQ-Cft" secondAttribute="top" id="OBX-68-Edg"/>
                                             <constraint firstItem="XwA-VS-EIf" firstAttribute="top" secondItem="VwK-FO-Ncq" secondAttribute="top" id="Qsv-6v-Cpk"/>
-                                            <constraint firstAttribute="trailing" secondItem="w4S-F0-Vsf" secondAttribute="trailing" constant="25" id="ZZT-II-mR9"/>
+                                            <constraint firstAttribute="trailing" secondItem="w4S-F0-Vsf" secondAttribute="trailing" constant="20" id="ZZT-II-mR9"/>
                                             <constraint firstItem="VwK-FO-Ncq" firstAttribute="leading" secondItem="K4u-vQ-Cft" secondAttribute="leading" constant="16" id="kij-zd-Ofl"/>
                                             <constraint firstItem="XwA-VS-EIf" firstAttribute="leading" secondItem="VwK-FO-Ncq" secondAttribute="trailing" constant="10" id="vzZ-61-r8f"/>
-                                            <constraint firstItem="OSq-7z-OWD" firstAttribute="top" secondItem="XwA-VS-EIf" secondAttribute="bottom" constant="20" id="y44-pF-OTV"/>
+                                            <constraint firstItem="OSq-7z-OWD" firstAttribute="top" secondItem="XwA-VS-EIf" secondAttribute="bottom" constant="5" id="y44-pF-OTV"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmM-t1-uEY">
@@ -314,13 +314,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Required money" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7T-oH-wWN">
-                                                <rect key="frame" x="76" y="0.0" width="191.5" height="19.5"/>
+                                                <rect key="frame" x="76" y="0.0" width="196.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2y-BP-RqZ" customClass="CosmosView" customModule="Cosmos">
-                                                <rect key="frame" x="76" y="39.5" width="191.5" height="20.5"/>
+                                                <rect key="frame" x="76" y="24.5" width="196.5" height="20.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filled_circle_icon"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="empty_circle_icon"/>
@@ -346,7 +346,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="La5-gN-D93">
-                                                <rect key="frame" x="282.5" y="16" width="12.5" height="24"/>
+                                                <rect key="frame" x="287.5" y="16" width="12.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -361,11 +361,11 @@
                                             <constraint firstItem="E7T-oH-wWN" firstAttribute="leading" secondItem="anL-NT-MMf" secondAttribute="trailing" constant="10" id="RzE-AO-YIv"/>
                                             <constraint firstItem="La5-gN-D93" firstAttribute="leading" secondItem="E7T-oH-wWN" secondAttribute="trailing" constant="15" id="UZ4-Gi-IBl"/>
                                             <constraint firstItem="anL-NT-MMf" firstAttribute="leading" secondItem="vmM-t1-uEY" secondAttribute="leading" constant="16" id="Xss-Gr-QYx"/>
-                                            <constraint firstItem="b2y-BP-RqZ" firstAttribute="top" secondItem="E7T-oH-wWN" secondAttribute="bottom" constant="20" id="aCJ-t9-yPo"/>
-                                            <constraint firstAttribute="bottom" secondItem="b2y-BP-RqZ" secondAttribute="bottom" constant="5" id="aTk-MV-PEE"/>
+                                            <constraint firstItem="b2y-BP-RqZ" firstAttribute="top" secondItem="E7T-oH-wWN" secondAttribute="bottom" constant="5" id="aCJ-t9-yPo"/>
+                                            <constraint firstAttribute="bottom" secondItem="b2y-BP-RqZ" secondAttribute="bottom" constant="20" id="aTk-MV-PEE"/>
                                             <constraint firstItem="E7T-oH-wWN" firstAttribute="top" secondItem="anL-NT-MMf" secondAttribute="top" id="hwJ-I0-Pu7"/>
                                             <constraint firstItem="anL-NT-MMf" firstAttribute="top" secondItem="vmM-t1-uEY" secondAttribute="top" id="lm4-Uh-gWb"/>
-                                            <constraint firstAttribute="trailing" secondItem="La5-gN-D93" secondAttribute="trailing" constant="25" id="zwq-P0-iIG"/>
+                                            <constraint firstAttribute="trailing" secondItem="La5-gN-D93" secondAttribute="trailing" constant="20" id="zwq-P0-iIG"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jg0-nZ-PNe">
@@ -379,13 +379,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Expected profit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3f-kx-LM9">
-                                                <rect key="frame" x="76" y="0.0" width="191.5" height="19.5"/>
+                                                <rect key="frame" x="76" y="0.0" width="196.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LkH-Z5-wiI" customClass="CosmosView" customModule="Cosmos">
-                                                <rect key="frame" x="76" y="39.5" width="191.5" height="20.5"/>
+                                                <rect key="frame" x="76" y="24.5" width="196.5" height="20.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filled_circle_icon"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="empty_circle_icon"/>
@@ -411,7 +411,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hme-Nh-qwX">
-                                                <rect key="frame" x="282.5" y="16" width="12.5" height="24"/>
+                                                <rect key="frame" x="287.5" y="16" width="12.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -423,12 +423,12 @@
                                             <constraint firstItem="7VL-Nj-bDc" firstAttribute="top" secondItem="Jg0-nZ-PNe" secondAttribute="top" id="64y-SE-Vxr"/>
                                             <constraint firstItem="J3f-kx-LM9" firstAttribute="trailing" secondItem="LkH-Z5-wiI" secondAttribute="trailing" id="JZl-KA-Bqe"/>
                                             <constraint firstItem="J3f-kx-LM9" firstAttribute="top" secondItem="7VL-Nj-bDc" secondAttribute="top" id="YSa-fj-Odj"/>
-                                            <constraint firstItem="LkH-Z5-wiI" firstAttribute="top" secondItem="J3f-kx-LM9" secondAttribute="bottom" constant="20" id="YqW-en-e0F"/>
+                                            <constraint firstItem="LkH-Z5-wiI" firstAttribute="top" secondItem="J3f-kx-LM9" secondAttribute="bottom" constant="5" id="YqW-en-e0F"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="ZGe-yD-ik1"/>
                                             <constraint firstItem="J3f-kx-LM9" firstAttribute="leading" secondItem="7VL-Nj-bDc" secondAttribute="trailing" constant="10" id="jUO-bM-SGy"/>
-                                            <constraint firstAttribute="bottom" secondItem="LkH-Z5-wiI" secondAttribute="bottom" constant="5" id="kA8-NJ-kHD"/>
+                                            <constraint firstAttribute="bottom" secondItem="LkH-Z5-wiI" secondAttribute="bottom" constant="20" id="kA8-NJ-kHD"/>
                                             <constraint firstItem="7VL-Nj-bDc" firstAttribute="leading" secondItem="Jg0-nZ-PNe" secondAttribute="leading" constant="16" id="mQM-aQ-pbm"/>
-                                            <constraint firstAttribute="trailing" secondItem="hme-Nh-qwX" secondAttribute="trailing" constant="25" id="rDm-nd-2TP"/>
+                                            <constraint firstAttribute="trailing" secondItem="hme-Nh-qwX" secondAttribute="trailing" constant="20" id="rDm-nd-2TP"/>
                                             <constraint firstItem="hme-Nh-qwX" firstAttribute="top" secondItem="Jg0-nZ-PNe" secondAttribute="top" constant="16" id="sUj-Qm-R3H"/>
                                             <constraint firstItem="hme-Nh-qwX" firstAttribute="leading" secondItem="J3f-kx-LM9" secondAttribute="trailing" constant="15" id="tbk-vN-iew"/>
                                         </constraints>
@@ -444,13 +444,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thm-Bc-XCa">
-                                                <rect key="frame" x="76" y="0.0" width="191.5" height="19.5"/>
+                                                <rect key="frame" x="76" y="0.0" width="196.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knK-rJ-4vm" customClass="CosmosView" customModule="Cosmos">
-                                                <rect key="frame" x="76" y="39.5" width="191.5" height="20.5"/>
+                                                <rect key="frame" x="76" y="24.5" width="196.5" height="20.5"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filled_circle_icon"/>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="empty_circle_icon"/>
@@ -476,7 +476,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drW-pj-QIQ">
-                                                <rect key="frame" x="282.5" y="16" width="12.5" height="24"/>
+                                                <rect key="frame" x="287.5" y="16" width="12.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -487,13 +487,13 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="C5z-Cm-6fa"/>
                                             <constraint firstItem="thm-Bc-XCa" firstAttribute="trailing" secondItem="knK-rJ-4vm" secondAttribute="trailing" id="DmI-yN-Q9o"/>
                                             <constraint firstItem="Qni-jl-Tod" firstAttribute="top" secondItem="UoM-6P-Jc9" secondAttribute="top" id="Fjj-6r-y4h"/>
-                                            <constraint firstAttribute="bottom" secondItem="knK-rJ-4vm" secondAttribute="bottom" constant="5" id="GVO-5W-XGX"/>
+                                            <constraint firstAttribute="bottom" secondItem="knK-rJ-4vm" secondAttribute="bottom" constant="20" id="GVO-5W-XGX"/>
                                             <constraint firstItem="thm-Bc-XCa" firstAttribute="top" secondItem="Qni-jl-Tod" secondAttribute="top" id="ZyA-wo-gw1"/>
                                             <constraint firstItem="drW-pj-QIQ" firstAttribute="top" secondItem="UoM-6P-Jc9" secondAttribute="top" constant="16" id="eXI-Sc-cmz"/>
                                             <constraint firstItem="thm-Bc-XCa" firstAttribute="leading" secondItem="Qni-jl-Tod" secondAttribute="trailing" constant="10" id="ery-g5-lVv"/>
-                                            <constraint firstAttribute="trailing" secondItem="drW-pj-QIQ" secondAttribute="trailing" constant="25" id="n4v-nF-Yfa"/>
+                                            <constraint firstAttribute="trailing" secondItem="drW-pj-QIQ" secondAttribute="trailing" constant="20" id="n4v-nF-Yfa"/>
                                             <constraint firstItem="drW-pj-QIQ" firstAttribute="leading" secondItem="thm-Bc-XCa" secondAttribute="trailing" constant="15" id="qAY-G1-wXw"/>
-                                            <constraint firstItem="knK-rJ-4vm" firstAttribute="top" secondItem="thm-Bc-XCa" secondAttribute="bottom" constant="20" id="tE0-bQ-sQU"/>
+                                            <constraint firstItem="knK-rJ-4vm" firstAttribute="top" secondItem="thm-Bc-XCa" secondAttribute="bottom" constant="5" id="tE0-bQ-sQU"/>
                                             <constraint firstItem="knK-rJ-4vm" firstAttribute="leading" secondItem="thm-Bc-XCa" secondAttribute="leading" id="uPU-fi-L0l"/>
                                             <constraint firstItem="Qni-jl-Tod" firstAttribute="leading" secondItem="UoM-6P-Jc9" secondAttribute="leading" constant="16" id="vxD-3t-NZV"/>
                                         </constraints>
