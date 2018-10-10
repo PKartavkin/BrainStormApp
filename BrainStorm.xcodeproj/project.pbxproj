@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20F688E1BDA7EED38EA1F6F8 /* Pods_BrainStorm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A478EE8FC237B807D605FDF6 /* Pods_BrainStorm.framework */; };
+		B20296BF216E7BC200FC7263 /* RatingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20296BE216E7BC200FC7263 /* RatingTableViewController.swift */; };
 		B21190BC211114D600F3CD9C /* BrainStorm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B21190BA211114D600F3CD9C /* BrainStorm.xcdatamodeld */; };
 		B21190BE2111166C00F3CD9C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21190BD2111166C00F3CD9C /* Category.swift */; };
 		B21190C02111170600F3CD9C /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21190BF2111170600F3CD9C /* Idea.swift */; };
@@ -32,8 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73BA0C50B2E905A8E06FC643 /* Pods-BrainStorm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStorm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrainStorm/Pods-BrainStorm.debug.xcconfig"; sourceTree = "<group>"; };
 		8AC37CD468349664D3425C10 /* Pods_BrainStormApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrainStormApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FFD22533AAD958D4871420 /* Pods-BrainStormApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStormApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrainStormApp/Pods-BrainStormApp.release.xcconfig"; sourceTree = "<group>"; };
+		A478EE8FC237B807D605FDF6 /* Pods_BrainStorm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrainStorm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20296BE216E7BC200FC7263 /* RatingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewController.swift; sourceTree = "<group>"; };
 		B21190BB211114D600F3CD9C /* BrainStorm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrainStorm.xcdatamodel; sourceTree = "<group>"; };
 		B21190BD2111166C00F3CD9C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B21190BF2111170600F3CD9C /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 		B2FA9D382104024200DFF1C5 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		B2FA9D3D210408AE00DFF1C5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C2A3D9815BFCF9342A97A141 /* Pods-BrainStormApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStormApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrainStormApp/Pods-BrainStormApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CBA7814AB9A64B97629AA56D /* Pods-BrainStorm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStorm.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrainStorm/Pods-BrainStorm.release.xcconfig"; sourceTree = "<group>"; };
 		E9030DC521466D8E009A4E1E /* BrainStormFinal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrainStormFinal.xcdatamodel; sourceTree = "<group>"; };
 		E987EFAD2122275600AA89E2 /* BrainStormMarksFields.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrainStormMarksFields.xcdatamodel; sourceTree = "<group>"; };
 		E987EFAE21222A8900AA89E2 /* BrainStormUpdated.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrainStormUpdated.xcdatamodel; sourceTree = "<group>"; };
@@ -69,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4FE104A9AC4480511BF89E3 /* Pods_BrainStormApp.framework in Frameworks */,
+				20F688E1BDA7EED38EA1F6F8 /* Pods_BrainStorm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				8AC37CD468349664D3425C10 /* Pods_BrainStormApp.framework */,
+				A478EE8FC237B807D605FDF6 /* Pods_BrainStorm.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 				B2FA9D352103FE7D00DFF1C5 /* AddIdeaViewController.swift */,
 				B2D5B81321148B0500AF9C39 /* ManageCategoriesTableViewController.swift */,
 				B2D5B8192114AA1100AF9C39 /* AddCategoryViewController.swift */,
+				B20296BE216E7BC200FC7263 /* RatingTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +224,8 @@
 			children = (
 				C2A3D9815BFCF9342A97A141 /* Pods-BrainStormApp.debug.xcconfig */,
 				91FFD22533AAD958D4871420 /* Pods-BrainStormApp.release.xcconfig */,
+				73BA0C50B2E905A8E06FC643 /* Pods-BrainStorm.debug.xcconfig */,
+				CBA7814AB9A64B97629AA56D /* Pods-BrainStorm.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -294,7 +305,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BrainStormApp/Pods-BrainStormApp-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-BrainStorm/Pods-BrainStorm-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CoreStore/CoreStore.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/KMPlaceholderTextView/KMPlaceholderTextView.framework",
@@ -309,7 +320,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrainStormApp/Pods-BrainStormApp-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrainStorm/Pods-BrainStorm-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		73F9BC691183489DFF485521 /* [CP] Check Pods Manifest.lock */ = {
@@ -323,7 +334,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BrainStormApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BrainStorm-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -366,6 +377,7 @@
 				B28DE1EA20FEADA100A75EDF /* UIConstants.swift in Sources */,
 				B21190C02111170600F3CD9C /* Idea.swift in Sources */,
 				B21190BC211114D600F3CD9C /* BrainStorm.xcdatamodeld in Sources */,
+				B20296BF216E7BC200FC7263 /* RatingTableViewController.swift in Sources */,
 				B2FA9D392104024200DFF1C5 /* UIHelper.swift in Sources */,
 				B21190BE2111166C00F3CD9C /* Category.swift in Sources */,
 			);
@@ -509,7 +521,7 @@
 		};
 		B26AEB9720FE9B2C003D1743 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2A3D9815BFCF9342A97A141 /* Pods-BrainStormApp.debug.xcconfig */;
+			baseConfigurationReference = 73BA0C50B2E905A8E06FC643 /* Pods-BrainStorm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -531,7 +543,7 @@
 		};
 		B26AEB9820FE9B2C003D1743 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91FFD22533AAD958D4871420 /* Pods-BrainStormApp.release.xcconfig */;
+			baseConfigurationReference = CBA7814AB9A64B97629AA56D /* Pods-BrainStorm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";

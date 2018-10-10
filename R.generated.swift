@@ -201,12 +201,21 @@ struct R: Rswift.Validatable {
   
   /// This `R.segue` struct is generated, and contains static references to 3 view controllers.
   struct segue {
-    /// This struct is generated for `AddIdeaViewController`, and contains static references to 2 segues.
+    /// This struct is generated for `AddIdeaViewController`, and contains static references to 3 segues.
     struct addIdeaViewController {
+      /// Segue identifier `embededRatingTVC`.
+      static let embededRatingTVC: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, AddIdeaViewController, RatingTableViewController> = Rswift.StoryboardSegueIdentifier(identifier: "embededRatingTVC")
       /// Segue identifier `showAddCategory`.
       static let showAddCategory: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, AddIdeaViewController, AddCategoryViewController> = Rswift.StoryboardSegueIdentifier(identifier: "showAddCategory")
       /// Segue identifier `showManageCategories`.
       static let showManageCategories: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, AddIdeaViewController, ManageCategoriesTableViewController> = Rswift.StoryboardSegueIdentifier(identifier: "showManageCategories")
+      
+      /// Optionally returns a typed version of segue `embededRatingTVC`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func embededRatingTVC(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, AddIdeaViewController, RatingTableViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.addIdeaViewController.embededRatingTVC, segue: segue)
+      }
       
       /// Optionally returns a typed version of segue `showAddCategory`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.

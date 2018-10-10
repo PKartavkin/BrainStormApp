@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/hzahariev/Documents/appolica/BrainStormApp/BrainStorm.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:BrainStorm.xcodeproj">
    </FileRef>
    <FileRef
