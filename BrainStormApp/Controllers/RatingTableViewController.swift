@@ -11,7 +11,7 @@ import Cosmos
 class RatingTableViewController: UITableViewController {
 
     private enum Constant {
-        static let defaultRating: Double = 5
+        static let defaultRating: Int = 5
     }
 
     var timeToMarketScore: Int = Constant.defaultRating {

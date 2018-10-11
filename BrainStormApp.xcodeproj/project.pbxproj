@@ -43,7 +43,7 @@
 		B21190BD2111166C00F3CD9C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B21190BF2111170600F3CD9C /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
 		B21190C1211118C000F3CD9C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
-		B26AEB8420FE9B2B003D1743 /* BrainStorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainStorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B26AEB8420FE9B2B003D1743 /* BrainStormApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainStormApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B26AEB8720FE9B2B003D1743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B26AEB8920FE9B2B003D1743 /* IdeasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasTableViewController.swift; sourceTree = "<group>"; };
 		B26AEB8C20FE9B2B003D1743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		B26AEB8520FE9B2B003D1743 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B26AEB8420FE9B2B003D1743 /* BrainStorm.app */,
+				B26AEB8420FE9B2B003D1743 /* BrainStormApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,9 +233,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B26AEB8320FE9B2B003D1743 /* BrainStorm */ = {
+		B26AEB8320FE9B2B003D1743 /* BrainStormApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B26AEB9620FE9B2C003D1743 /* Build configuration list for PBXNativeTarget "BrainStorm" */;
+			buildConfigurationList = B26AEB9620FE9B2C003D1743 /* Build configuration list for PBXNativeTarget "BrainStormApp" */;
 			buildPhases = (
 				73F9BC691183489DFF485521 /* [CP] Check Pods Manifest.lock */,
 				B26AEB8020FE9B2B003D1743 /* Sources */,
@@ -248,9 +248,9 @@
 			);
 			dependencies = (
 			);
-			name = BrainStorm;
+			name = BrainStormApp;
 			productName = BrainStormApp;
-			productReference = B26AEB8420FE9B2B003D1743 /* BrainStorm.app */;
+			productReference = B26AEB8420FE9B2B003D1743 /* BrainStormApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -280,7 +280,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B26AEB8320FE9B2B003D1743 /* BrainStorm */,
+				B26AEB8320FE9B2B003D1743 /* BrainStormApp */,
 			);
 		};
 /* End PBXProject section */
@@ -575,7 +575,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B26AEB9620FE9B2C003D1743 /* Build configuration list for PBXNativeTarget "BrainStorm" */ = {
+		B26AEB9620FE9B2C003D1743 /* Build configuration list for PBXNativeTarget "BrainStormApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B26AEB9720FE9B2C003D1743 /* Debug */,
