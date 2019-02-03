@@ -1,6 +1,0 @@
-framework module Pods_BrainStormApp {
-  umbrella header "Pods-BrainStormApp-umbrella.h"
-
-  export *
-  module * { export * }
-}

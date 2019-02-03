@@ -10,11 +10,10 @@ import Cosmos
 import KMPlaceholderTextView
 
 class AddIdeaViewController: UIViewController, UITextFieldDelegate {
-    
-    private enum Constant {
-        static let defaultRating: Double = 5
-    }
-    
+
+    private var ratingTableViewControllerController: RatingTableViewController?
+
+    @IBOutlet weak var ratingContainerView: UIView!
     @IBOutlet weak var categoryButton: UIButton!
     
     private var selectedCategory: Category? {
@@ -29,35 +28,6 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate {
 
     private var idea: Idea?
     
-    @IBOutlet weak var timeToMarketLabel: UILabel!
-    @IBOutlet weak var requiredMoneyLabel: UILabel!
-    @IBOutlet weak var expectedProfitLabel: UILabel!
-    @IBOutlet weak var difficultyLabel: UILabel!
-    
-    @IBOutlet weak var timeToMarketCosmosView: CosmosView! {
-        didSet {
-            timeToMarketCosmosView.rating = Constant.defaultRating
-        }
-    }
-    
-    @IBOutlet weak var requiredMoneyCosmosView: CosmosView! {
-        didSet {
-            requiredMoneyCosmosView.rating = Constant.defaultRating
-        }
-    }
-    
-    @IBOutlet weak var profitCosmosView: CosmosView! {
-        didSet {
-            profitCosmosView.rating = Constant.defaultRating
-        }
-    }
-    
-    @IBOutlet weak var difficultyCosmosView: CosmosView! {
-        didSet {
-            difficultyCosmosView.rating = Constant.defaultRating
-        }
-    }
-    
     @IBOutlet weak var descriptionTextView: KMPlaceholderTextView!
     
     @IBOutlet weak var titleTextField: UITextField!
@@ -67,10 +37,24 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate {
         selectedCategory = idea?.category
     }
 
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else {
+            return
+        }
+
+        switch identifier {
+        case R.segue.addIdeaViewController.embededRatingTVC.identifier:
+            let destinationController = segue.destination as! RatingTableViewController
+            ratingTableViewControllerController = destinationController
+        default:
+            break
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupRatings()
         fillIdea()
         titleTextField.delegate = self
     }
@@ -90,21 +74,6 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate {
     }
 
     // MARK: - Private
-    
-    private func setupRatings() {
-        func updateRating(ratingView: CosmosView, ratingLabel: UILabel) {
-            let updateRating: (Double) -> Void = { (rating) in
-                ratingView.rating = rating.rounded(.up)
-                ratingLabel.text = String(Int(rating.rounded(.up)))
-            }
-            ratingView.didTouchCosmos = updateRating
-        }
-        
-        updateRating(ratingView: timeToMarketCosmosView, ratingLabel: timeToMarketLabel)
-        updateRating(ratingView: requiredMoneyCosmosView, ratingLabel: requiredMoneyLabel)
-        updateRating(ratingView: profitCosmosView, ratingLabel: expectedProfitLabel)
-        updateRating(ratingView: difficultyCosmosView, ratingLabel: difficultyLabel)
-    }
 
     private func fillIdea() {
         // This is not the best implementation every. We could make touple or something like this between the cosmosView and the label but this implementation will do the work
@@ -113,17 +82,17 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate {
             label.text = "\(value)"
         }
 
-        guard let idea = idea else {
+        guard let idea = idea, let ratingTableViewControllerController = ratingTableViewControllerController else {
             return
         }
         titleTextField.text = idea.title
         descriptionTextView.text = idea.desc
         selectedCategory = idea.category
 
-        setRating(for: timeToMarketCosmosView, and: timeToMarketLabel, with: Int(idea.timeToMarket))
-        setRating(for: requiredMoneyCosmosView, and: requiredMoneyLabel, with: Int(idea.requiredMoney))
-        setRating(for: profitCosmosView, and: expectedProfitLabel, with: Int(idea.expectedProfit))
-        setRating(for: difficultyCosmosView, and: difficultyLabel, with: Int(idea.difficulty))
+        ratingTableViewControllerController.timeToMarketScore = Int(idea.timeToMarket)
+        ratingTableViewControllerController.requiredMoneyScore = Int(idea.requiredMoney)
+        ratingTableViewControllerController.expectedProfitScore = Int(idea.expectedProfit)
+        ratingTableViewControllerController.difficultyScore = Int(idea.difficulty)
     }
     
     private func calculateScore(timeToMarket: Int, requiredMoney: Int, expectableProfit: Int, difficulty: Int) -> Double {
@@ -162,19 +131,29 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate {
             UIHelper.showErrorAlert(with: "Please enter description")
             return
         }
+
+        guard let ratingTableViewController = ratingTableViewControllerController else {
+            return
+        }
+
+        let timeToMarketScore = ratingTableViewController.timeToMarketScore
+        let requiredMoneyScore = ratingTableViewController.requiredMoneyScore
+        let expectedProfitScore = ratingTableViewController.expectedProfitScore
+        let difficultyScore = ratingTableViewController.difficultyScore
+
         
-        let rating = calculateScore(timeToMarket: Int(timeToMarketCosmosView.rating),
-                                    requiredMoney: Int(requiredMoneyCosmosView.rating),
-                                    expectableProfit: Int(profitCosmosView.rating),
-                                    difficulty: Int(difficultyCosmosView.rating))
+        let rating = calculateScore(timeToMarket: Int(timeToMarketScore),
+                                    requiredMoney: Int(requiredMoneyScore),
+                                    expectableProfit: Int(expectedProfitScore),
+                                    difficulty: Int(difficultyScore))
         // COULD BE REFACTORED
         if let idea = idea {
             idea.title = title
             idea.desc = description
-            idea.timeToMarket = Int16(timeToMarketCosmosView.rating)
-            idea.expectedProfit = Int16(profitCosmosView.rating)
-            idea.difficulty = Int16(difficultyCosmosView.rating)
-            idea.requiredMoney = Int16(requiredMoneyCosmosView.rating)
+            idea.timeToMarket = Int16(timeToMarketScore)
+            idea.expectedProfit = Int16(expectedProfitScore)
+            idea.difficulty = Int16(difficultyScore)
+            idea.requiredMoney = Int16(requiredMoneyScore)
             idea.category = selectedCategory
             idea.score = rating
 
@@ -183,10 +162,10 @@ class AddIdeaViewController: UIViewController, UITextFieldDelegate {
         
             DatabaseManager.addIdea(name: title,
                                     description: description,
-                                    timeToMarket: Int16(timeToMarketCosmosView.rating),
-                                    requiredMoney: Int16(requiredMoneyCosmosView.rating),
-                                    expectedProfit: Int16(profitCosmosView.rating),
-                                    difficulty: Int16(difficultyCosmosView.rating),
+                                    timeToMarket: Int16(timeToMarketScore),
+                                    requiredMoney: Int16(requiredMoneyScore),
+                                    expectedProfit: Int16(expectedProfitScore),
+                                    difficulty: Int16(difficultyScore),
                                     rating: rating,
                                     category: selectedCategory)
         }
